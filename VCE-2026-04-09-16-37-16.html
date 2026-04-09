@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double X Delivery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a1f44;
+    color: white;
+    overflow-x: hidden;
+}
+
+.bg span {
+    position: absolute;
+    opacity: 0.15;
+    animation: float linear infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(-50px); opacity:0;}
+    50% {opacity:0.4;}
+    100% {transform: translateY(110vh); opacity:0;}
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero img {
+    width: 90px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: gold;
+    font-size: 20px;
+}
+
+.btn {
+    display: block;
+    width: 230px;
+    margin: 12px auto;
+    padding: 14px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+.call {background:#0d6efd;}
+.whatsapp {background:#25D366;}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    width: 240px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg" id="bgIcons"></div>
+
+<header>Double X 🚀</header>
+
+<section class="hero">
+
+<!-- اللوجو -->
+<img src="logo.png">
+
+<h1>خلي الدليفري علينا</h1>
+<p class="subtitle">Inside Luxor</p>
+
+<p>سرعة × دقة × أمان</p>
+
+<!-- زر الاتصال -->
+<a href="tel:01094527997" class="btn call">📞 اطلب دلوقتي</a>
+
+<!-- واتساب جروب -->
+<a href="https://chat.whatsapp.com/L9084sJ0leoC6zA3eFs2Ic" target="_blank" class="btn whatsapp">
+💬 واتساب جروب
+</a>
+
+<!-- واتساب شخصي -->
+<a href="https://wa.me/201094527997?text=عايز%20اطلب%20دليفري%20من%20Double%20X" target="_blank" class="btn whatsapp">
+📲 واتساب
+</a>
+
+<!-- QR CODE -->
+<div style="margin-top:30px;">
+<h3>امسح الكود للانضمام</h3>
+<img src="qr.png" style="width:200px; border-radius:15px;">
+</div>
+
+</section>
+
+<section class="cards">
+<div class="card">🚚 توصيل سريع</div>
+<div class="card">📦 تتبع الطلب</div>
+<div class="card">⭐ خدمة ممتازة</div>
+</section>
+
+<footer>
+📞 01094527997 <br>
+© 2026 Double X
+</footer>
+
+<script>
+const icons = ["🚚","📦","🛵","📍"];
+const container = document.getElementById("bgIcons");
+
+for(let i=0;i<25;i++){
+ let s=document.createElement("span");
+ s.innerText=icons[Math.floor(Math.random()*icons.length)];
+ s.style.left=Math.random()*100+"%";
+ s.style.fontSize=(15+Math.random()*20)+"px";
+ s.style.animationDuration=(5+Math.random()*6)+"s";
+ s.style.animationDelay=Math.random()*5+"s";
+ container.appendChild(s);
+}
+</script>
+
+</body>
+</html>
